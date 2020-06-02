@@ -50,6 +50,7 @@ https://app.vagrantup.com/boxes/search
 
 
 ## Resources
+- [vagrant_lamp_traversy - GitHub](https://github.com/bradtraversy/vagrant_lamp_traversy)
 - [Vagrant Crash Course - Traversy media](https://youtu.be/vBreXjkizgo)
 - [Docker Vs Vagrant](https://youtu.be/9QGkJvbLpRA)
 
