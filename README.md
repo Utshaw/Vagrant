@@ -22,7 +22,8 @@
 
 
 
-## Example
+## Setting Up
+### Commands
 ```
 mkdir vgdemo # create a dir for containing the vagrant project files
 cd vgdemo/  # entering that dir
@@ -33,8 +34,15 @@ vargrant suspend [VM] # suspends the VM
 vargrant resume [VM] # resumes the VM
 vargrant reload [VM] # reloads the VM (run this after any change in the VagrantFile)
 vagrant status # status of the VMs
-vagrant ssh # ssh into the VM, connect to the virtual machine as vagrant user; password for root & vagrant both account: vagrant
+vagrant ssh [VM] # ssh into the VM, connect to the virtual machine as vagrant user; password for root & vagrant both account: vagrant
 exit # logout of the VM & return to host OS
+vagrant halt [VM] # stop the VM
+vagrant destroy [VM]# deletes the VM completely
+```
+### VagrantFile
+```
+config.vm.hostname = "UtshawsCentOS" # Change the default hostname of the guest machine
+config.vm.network "private_network", ip: "10.9.8.7" # Change the IP address of the guest machine use ping command to test if it's successful
 ```
 
 ## Search for Box from here
