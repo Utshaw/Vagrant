@@ -1,5 +1,26 @@
 # Vagrant (Development Environments Made Easy) <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Vagrant.png/492px-Vagrant.png" align="right" width="100px" alt="Vagrant Logo">
 
+## Info (Docker & Vagrant)
+- Used for creating development environment
+- While Docker uses container technology vagrant used Virtual Machines
+- VMs emulate a physical computer comes with complete OS, resource allocation
+- Host machine provides necessary physical resources 
+- Virtualized envionment works as independent machine with it's own BIOS, CPU, storage, network adapters 
+- Modern VMs run on Hypervisors
+- Hypervisors are responsible for creation and execution of VMs
+- Example of Hypervisors: KVM, vmware
+- Vagrant is Open Source tool for creating and maintaining Virtual Machines
+- Vagrant Simplifies the management of VMs
+- Containers create virtualization on the OS level
+- Containers create executable software package which isolates app from it's environments
+- Inside the package the container has necesary properties Code, Runtime, system library
+- Containers run on OS of host machine
+- Docker doesn't create whole OS
+- Docker Uses kernel of the host OS & creates virtualization only for the application and necessary libraries
+
+
+
+
 ## Example
 ```
 mkdir vgdemo # create a dir for containing the vagrant project files
@@ -17,5 +38,6 @@ https://app.vagrantup.com/boxes/search
 
 
 ## Resources
-- [Traversy media](https://youtu.be/vBreXjkizgo)
+- [Vagrant Crash Course - Traversy media](https://youtu.be/vBreXjkizgo)
+- [Docker Vs Vagrant](https://youtu.be/9QGkJvbLpRA)
 
