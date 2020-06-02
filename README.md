@@ -34,6 +34,7 @@ vargrant resume [VM] # resumes the VM
 vargrant reload [VM] # reloads the VM (run this after any change in the VagrantFile)
 vagrant status # status of the VMs
 vagrant ssh # ssh into the VM, connect to the virtual machine as vagrant user; password for root & vagrant both account: vagrant
+exit # logout of the VM & return to host OS
 ```
 
 ## Search for Box from here
