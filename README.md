@@ -17,6 +17,7 @@
 - Containers run on OS of host machine
 - Docker doesn't create whole OS
 - Docker Uses kernel of the host OS & creates virtualization only for the application and necessary libraries
+- ssh: Secure Shell, a network protocol for connecting to remote system
 
 
 
@@ -25,12 +26,14 @@
 ```
 mkdir vgdemo # create a dir for containing the vagrant project files
 cd vgdemo/  # entering that dir
-vagrant init centos/7 # initialize a public box (https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&sort=downloads&provider=&q=centos)
-vagrant up # if the virtual guest machine exists it will run that otherwise download it then runs that; make sure to run this command from inside the folder where VagrantFile resides
+vbox add centos/7 # would just add the box and don't create a Vagrantfile
+vagrant init centos/7 # initialize the specified public box (https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&sort=downloads&provider=&q=centos) & creates VagrantFile
+vagrant up # if the virtual guest machine exists it will run that otherwise adds it then runs that; make sure to run this command from inside the folder where VagrantFile resides
 vargrant suspend [VM] # suspends the VM
 vargrant resume [VM] # resumes the VM
 vargrant reload [VM] # reloads the VM (run this after any change in the VagrantFile)
-
+vagrant status # status of the VMs
+vagrant ssh # ssh into the VM, connect to the virtual machine as vagrant user; password for root & vagrant both account: vagrant
 ```
 
 ## Search for Box from here
