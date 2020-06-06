@@ -42,11 +42,13 @@ vagrant ssh [VM] # ssh into the VM, connect to the virtual machine as vagrant us
 exit # logout of the VM & return to host OS
 vagrant halt [VM] # stop the VM
 vagrant destroy [VM]# deletes the VM completely
+vagrant reload --provision # to force provisioning
 ```
 ### VagrantFile
 ```
 config.vm.hostname = "UtshawsCentOS" # Change the default hostname of the guest machine
-config.vm.network "private_network", ip: "10.9.8.7" # Change the IP address of the guest machine use ping command to test if it's successful
+config.vm.network "private_network", ip: "10.9.8.7" # Change the IP address of the guest machine; cam be pinged from host machine
+config.vm.synced_folder "../data", "/vagrant_data" # ../data -> host directory /vagrant_data -> box directory (guest machine)
 ```
 #### Multiple machine based on single OS (VagrantFile) [multinet](./multinet/)
 ```
