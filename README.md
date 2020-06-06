@@ -25,6 +25,9 @@
 ## Setting Up
 ### Commands
 ```
+# Install vagrant from [Here](https://www.vagrantup.com/)
+# Install VirtualBox from [Here](https://www.virtualbox.org/wiki/Downloads)
+vagrant -v # check if installed 
 mkdir vgdemo # create a dir for containing the vagrant project files
 cd vgdemo/  # entering that dir
 vbox add centos/7 # would just add the box and don't create a Vagrantfile
@@ -65,6 +68,17 @@ Vagrant.configure("2") do |config|
   end
 
 end
+
+```
+Testing the above configuration:
+```
+# Login into the admin01
+vagrant ssh admin01
+# modify /etc/hosts of admin01
+echo '10.9.8.11 server01' | sudo tee -a /etc/hosts
+echo '10.9.8.12 server02' | sudo tee -a /etc/hosts
+# Check if the VMs are up & /etc/hosts is working
+ping -c 3 server01; ping -c 3 server02
 
 ```
 
