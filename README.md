@@ -30,6 +30,7 @@
 vagrant -v # check if installed 
 mkdir vgdemo # create a dir for containing the vagrant project files
 cd vgdemo/  # entering that dir
+# search on vagrantbox what you want from [here](https://app.vagrantup.com/boxes/search)
 vbox add centos/7 # would just add the box and don't create a Vagrantfile
 vagrant init centos/7 # initialize the specified public box (https://app.vagrantup.com/boxes/search?utf8=%E2%9C%93&sort=downloads&provider=&q=centos) & creates VagrantFile
 vagrant up # if the virtual guest machine exists it will run that otherwise adds it then runs that; make sure to run this command from inside the folder where VagrantFile resides
